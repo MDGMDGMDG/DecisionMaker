@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:md="clr-namespace:DecisionMaker"
+             x:Class="DecisionMaker.MainPage"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid ColumnDefinitions="*,3*,*">
+        <Image x:Name="redBackground"
+               Grid.ColumnSpan="3"
+               Source="redbackground.jpg"
+               Aspect="AspectFill" />
+        <Grid Grid.Column="1" x:Name="ballGrid">
+            <ImageButton x:Name="redBall"
+                         Source="redball.png"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         Clicked="redBall_Clicked"/>
+            <Label x:Name="answerLabel"
+                   LineBreakMode="WordWrap"
+                   Margin="20"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   Opacity="0.65"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        </Grid>
+        <Button Text="{x:Static md:MaterialDesignIcons.Add}"
+                FontFamily="Material"
+                FontSize="30"
+                TextColor="White"
+                BackgroundColor="Black"
+                WidthRequest="40"
+                HeightRequest="40"
+                HorizontalOptions="End"
+                VerticalOptions="Start"
+                Margin="8" 
+                Grid.Column="2"/>
+    </Grid>
+
+</ContentPage>
